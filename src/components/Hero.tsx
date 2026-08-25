@@ -103,17 +103,10 @@ const Hero: React.FC = () => (
       </div>
 
       <div>
-        {/* Cut out onto a flat background matching the page (white/black),
-            so the portrait blends in rather than sitting in a box. */}
         <img
-          src={asset('arna-light.jpg')}
+          src={asset('arna.jpg')}
           alt="Arna Ghosh"
-          className="aspect-[4/5] w-full max-w-[15rem] object-cover dark:hidden"
-        />
-        <img
-          src={asset('arna-dark.jpg')}
-          alt="Arna Ghosh"
-          className="hidden aspect-[4/5] w-full max-w-[15rem] object-cover dark:block"
+          className="aspect-[4/5] w-full max-w-[15rem] border border-rule object-cover"
         />
       </div>
     </div>
