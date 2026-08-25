@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+   Design tokens
+
+   Monochrome, editorial. White paper, near-black ink, grayscale everywhere —
+   no accent color. Mirrors daivikpatel.me's palette.
+   --------------------------------------------------------------------------- */
+@layer base {
+  :root {
+    --bg: 255 255 255;
+    --surface: 245 245 245;
+    --fg: 17 17 17;
+    --muted: 85 85 85;
+    --faint: 153 153 153;
+    --rule: 229 231 235;
+  }
+
+  .dark {
+    --bg: 10 10 10;
+    --surface: 24 24 24;
+    --fg: 245 245 245;
+    --muted: 170 170 170;
+    --faint: 115 115 115;
+    --rule: 38 38 38;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg font-sans text-fg antialiased;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+
+  ::selection {
+    background-color: rgb(var(--fg) / 0.15);
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--fg));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .font-mono {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-label uppercase text-faint;
+  }
+
+  /* Footnote-style link: label text with a small arrow that lifts on hover. */
+  .footnote-link {
+    @apply inline-flex items-center gap-1 text-fg transition-colors duration-300 hover:text-fg;
+  }
+
+  .footnote-link svg:last-child {
+    @apply text-faint transition-transform duration-300 ease-editorial;
+  }
+
+  .footnote-link:hover svg:last-child {
+    transform: translateY(-2px);
+  }
+
+  .footnote-link svg:first-child {
+    @apply transition-transform duration-300 ease-editorial;
+  }
+
+  .footnote-link:hover svg:first-child {
+    transform: scale(1.1);
+  }
+
+  .link {
+    @apply relative text-fg transition-colors duration-300;
+    text-decoration: none;
+    background-image: linear-gradient(rgb(var(--fg)), rgb(var(--fg)));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1px;
+    transition: background-size 0.4s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s;
+  }
+
+  .link:hover,
+  .link:focus-visible {
+    background-size: 100% 1px;
+  }
+
+  .link-quiet {
+    @apply text-fg transition-colors duration-300;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    text-decoration-color: rgb(var(--rule));
+  }
+
+  .link-quiet:hover,
+  .link-quiet:focus-visible {
+    text-decoration-color: rgb(var(--fg));
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Scroll reveal — see useReveal. Elements start hidden and are unhidden by
+   IntersectionObserver, which sets data-revealed.
+   --------------------------------------------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal][data-revealed='true'] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
