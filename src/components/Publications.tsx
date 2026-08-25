@@ -5,12 +5,10 @@ import { publications } from '../content/publications';
 
 const Publications: React.FC = () => (
   <ol className="mt-10 flex flex-col gap-8">
-    {publications.map((pub, i) => (
+    {publications.map((pub) => (
       <li
         key={pub.title}
         className="max-w-measure border-t border-rule pt-6 first:border-t-0 first:pt-0"
-        data-reveal
-        style={{ '--reveal-delay': `${Math.min(i, 4) * 60}ms` } as React.CSSProperties}
       >
         <p className="text-sm leading-snug text-fg">{pub.title}</p>
         <p className="mt-2 text-xs text-muted">

@@ -10,18 +10,18 @@ const Hero: React.FC = () => (
   <section id="hero" className="mx-auto max-w-page px-6 sm:px-10">
     <div className="grid gap-12 pb-16 pt-28 sm:pt-36 lg:grid-cols-[minmax(0,1fr)_15rem] lg:gap-16">
       <div className="max-w-2xl">
-        <h1 className="font-serif text-display font-normal text-fg" data-reveal>
+        <h1 className="font-serif text-display font-normal text-fg">
           arna <span className="mx-1 inline-block text-faint">·</span> ghosh
         </h1>
 
-        <p className="mb-1 mt-2 text-xs text-muted" data-reveal>
+        <p className="mb-1 mt-2 text-xs text-muted">
           /ˈɑːr.nə ɡoʊʃ/
         </p>
-        <p className="mb-6 text-sm text-muted" data-reveal>
+        <p className="mb-6 text-sm text-muted">
           noun
         </p>
 
-        <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted" data-reveal>
+        <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted">
           <p>
             <span className="mr-3 text-muted">1.</span>
             research scientist at{' '}
@@ -101,7 +101,7 @@ const Hero: React.FC = () => (
         </div>
       </div>
 
-      <div data-reveal style={{ '--reveal-delay': '160ms' } as React.CSSProperties}>
+      <div>
         <img
           src="/arna.jpg"
           alt="Arna Ghosh"

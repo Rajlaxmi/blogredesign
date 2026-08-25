@@ -4,7 +4,7 @@ import { research } from '../content/research';
 
 const Research: React.FC = () => (
   <div className="mt-10 flex flex-col gap-12">
-    {research.map((item, i) => {
+    {research.map((item) => {
       const details = (
         <div>
           <h2 className="text-sm font-semibold text-fg">{item.title}</h2>
@@ -49,8 +49,6 @@ const Research: React.FC = () => (
           className={`border-t border-rule pt-8 first:border-t-0 first:pt-0 ${
             item.image ? 'max-w-3xl' : 'max-w-measure'
           }`}
-          data-reveal
-          style={{ '--reveal-delay': `${i * 80}ms` } as React.CSSProperties}
         >
           {item.image ? (
             <div className="grid gap-6 sm:grid-cols-[1fr_16rem]">

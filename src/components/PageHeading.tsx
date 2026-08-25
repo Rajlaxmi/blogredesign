@@ -14,11 +14,11 @@ interface PageHeadingProps {
 const PageHeading: React.FC<PageHeadingProps> = ({ title, lead, children }) => (
   <section className="mx-auto max-w-page px-6 sm:px-10">
     <div className="max-w-2xl pb-24 pt-28 sm:pt-36">
-      <h1 className="font-serif text-display font-normal text-fg" data-reveal>
+      <h1 className="font-serif text-display font-normal text-fg">
         {title}
       </h1>
       {lead && (
-        <p className="mt-4 max-w-measure text-sm leading-relaxed text-muted" data-reveal>
+        <p className="mt-4 max-w-measure text-sm leading-relaxed text-muted">
           {lead}
         </p>
       )}
