@@ -2,7 +2,7 @@ import React from 'react';
 import SocialLinks from './SocialLinks';
 
 const Footer: React.FC = () => (
-  <footer id="contact" className="border-t border-rule">
+  <footer id="contact">
     <div className="mx-auto max-w-page px-6 py-12 sm:px-10">
       <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
         <div>
