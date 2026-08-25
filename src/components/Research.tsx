@@ -30,21 +30,27 @@ const Research: React.FC = () => (
             ))}
           </div>
           <p className="mt-4 text-[0.9rem] leading-relaxed text-muted">{item.description}</p>
-          <ul className="mt-4 flex flex-col gap-1.5">
-            {item.links.map((link) => (
-              <li key={link.url}>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footnote-link text-[0.82rem]"
-                >
-                  {link.label}
-                  <ExternalArrow size={9} />
-                </a>
+          <ol className="mt-4 flex flex-col gap-4">
+            {item.links.map((link, linkIndex) => (
+              <li key={link.url} className="flex gap-3">
+                <span className="mt-0.5 shrink-0 text-[0.8rem] text-faint">{linkIndex + 1}.</span>
+                <div>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footnote-link text-[0.85rem]"
+                  >
+                    {link.label}
+                    <ExternalArrow size={9} />
+                  </a>
+                  {link.note && (
+                    <p className="mt-1 text-[0.85rem] leading-relaxed text-muted">{link.note}</p>
+                  )}
+                </div>
               </li>
             ))}
-          </ul>
+          </ol>
         </div>
       ))}
     </div>
