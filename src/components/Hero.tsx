@@ -1,10 +1,9 @@
 import React from 'react';
-import SocialLinks from './SocialLinks';
 
 /**
  * Dictionary-entry hero: name, phonetic guide, part of speech, numbered
- * definitions, then a footnotes row of social links. Mirrors the format
- * daivikpatel.me uses for its own name treatment.
+ * definitions. Mirrors the format daivikpatel.me uses for its own name
+ * treatment. Social links live in the footer, not here.
  */
 const Hero: React.FC = () => (
   <section id="hero" className="mx-auto max-w-page px-6 sm:px-10">
@@ -97,13 +96,6 @@ const Hero: React.FC = () => (
           current philosophy: representation geometry first — it reveals how systems, artificial
           or biological, actually <b className="text-fg">learn</b>.
         </p>
-      </div>
-
-      <div className="mt-16 flex flex-wrap items-end justify-between gap-6" data-reveal>
-        <div>
-          <p className="mb-3 text-xs text-muted">footnotes</p>
-          <SocialLinks />
-        </div>
       </div>
     </div>
   </section>
