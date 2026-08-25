@@ -1,4 +1,5 @@
 import React from 'react';
+import { asset } from '../lib/asset';
 
 /**
  * Dictionary-entry hero: name, phonetic guide, part of speech, numbered
@@ -103,7 +104,7 @@ const Hero: React.FC = () => (
 
       <div>
         <img
-          src="/arna.jpg"
+          src={asset('arna.jpg')}
           alt="Arna Ghosh"
           className="aspect-[4/5] w-full max-w-[15rem] border border-rule object-cover"
         />

@@ -1,6 +1,7 @@
 import React from 'react';
 import Bold from './Bold';
 import { ExternalArrow } from './icons';
+import { asset } from '../lib/asset';
 import { publications } from '../content/publications';
 
 const Publications: React.FC = () => (
@@ -31,7 +32,7 @@ const Publications: React.FC = () => (
         </p>
         {pub.image && (
           <img
-            src={pub.image}
+            src={asset(pub.image)}
             alt={`Figure from "${pub.title}"`}
             className="mt-4 w-full border border-rule object-cover"
           />

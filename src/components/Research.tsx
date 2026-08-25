@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalArrow } from './icons';
+import { asset } from '../lib/asset';
 import { research } from '../content/research';
 
 const Research: React.FC = () => (
@@ -55,13 +56,13 @@ const Research: React.FC = () => (
               {details}
               <div>
                 <img
-                  src={item.image}
+                  src={asset(item.image)}
                   alt={`Illustration for "${item.title}"`}
                   className={`w-[92%] object-cover ${item.darkImage ? 'dark:hidden' : ''}`}
                 />
                 {item.darkImage && (
                   <img
-                    src={item.darkImage}
+                    src={asset(item.darkImage)}
                     alt={`Illustration for "${item.title}"`}
                     className="hidden w-[92%] object-cover dark:block"
                   />
