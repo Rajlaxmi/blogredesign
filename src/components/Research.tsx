@@ -56,7 +56,7 @@ const Research: React.FC = () => (
               <img
                 src={item.image}
                 alt={`Illustration for "${item.title}"`}
-                className="w-4/5 object-cover"
+                className="w-[92%] object-cover"
               />
             </div>
           ) : (
