@@ -47,14 +47,41 @@ const Hero: React.FC = () => (
           >
             McGill University
           </a>
-          , advised by Blake Richards; worked on neuro-inspired representation learning and
-          biologically-plausible credit assignment. PhD internships at Meta on neuromotor
-          interfaces.
+          , advised by{' '}
+          <a
+            href="https://linclab.mila.quebec/team/blake"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-fg link"
+          >
+            Blake Richards
+          </a>
+          ; focused on neuro-inspired unsupervised representation learning and
+          biologically-plausible credit assignment algorithms. PhD internships at Meta, developing
+          deep learning models for neuromotor interfaces.
         </p>
         <p>
           <span className="mr-3 text-muted">3.</span>
-          before that: MSc at McGill on deep learning for neuroimaging, and a BTech in electrical
-          engineering from{' '}
+          before that: MSc at McGill, under the supervision of{' '}
+          <a
+            href="https://boudriaslab.com/en/team/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-fg link"
+          >
+            Marie-Hélène Boudrias
+          </a>{' '}
+          and{' '}
+          <a
+            href="https://www.mcgill.ca/bbme/georgios-mitsis"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-fg link"
+          >
+            Georgios Mitsis
+          </a>
+          , developing deep learning techniques to advance neuroimaging analysis; and a BTech in
+          electrical engineering from{' '}
           <a
             href="http://www.iitkgp.ac.in/"
             target="_blank"
