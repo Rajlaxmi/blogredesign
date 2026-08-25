@@ -3,6 +3,8 @@ export interface Publication {
   authors: string; // pre-formatted, "A. Ghosh" bolded via **name**
   venue: string;
   links: { label: string; url: string }[];
+  /** Optional figure from the paper, served from public/. */
+  image?: string;
 }
 
 export const publications: Publication[] = [
@@ -14,6 +16,7 @@ export const publications: Publication[] = [
       { label: 'Paper', url: 'https://arxiv.org/abs/2509.23024' },
       { label: 'Project website', url: 'https://melodylizx.github.io/llm-geometry-project/' },
     ],
+    image: '/publications/representation-geometry.png',
   },
   {
     title: 'Harnessing small projectors and multiple views for efficient vision pretraining',

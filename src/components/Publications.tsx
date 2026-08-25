@@ -12,6 +12,13 @@ const Publications: React.FC = () => (
         data-reveal
         style={{ '--reveal-delay': `${Math.min(i, 4) * 60}ms` } as React.CSSProperties}
       >
+        {pub.image && (
+          <img
+            src={pub.image}
+            alt={`Figure from "${pub.title}"`}
+            className="mb-4 w-full border border-rule object-cover"
+          />
+        )}
         <p className="text-sm leading-snug text-fg">{pub.title}</p>
         <p className="mt-2 text-xs text-muted">
           <Bold text={pub.authors} />
