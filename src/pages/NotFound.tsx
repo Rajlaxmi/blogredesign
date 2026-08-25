@@ -8,7 +8,7 @@ const NotFound: React.FC = () => (
       <div className="max-w-2xl pb-24 pt-28 sm:pt-36">
         <p className="eyebrow mb-4">404</p>
         <h1 className="font-serif text-display font-normal text-fg">Nothing here.</h1>
-        <p className="mt-6 text-[0.9rem] text-muted">
+        <p className="mt-6 text-sm text-muted">
           <Link to="/" className="link">
             Back to the beginning
           </Link>

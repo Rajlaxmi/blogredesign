@@ -18,7 +18,7 @@ const PageHeading: React.FC<PageHeadingProps> = ({ title, lead, children }) => (
         {title}
       </h1>
       {lead && (
-        <p className="mt-4 max-w-measure text-[0.95rem] leading-relaxed text-muted" data-reveal>
+        <p className="mt-4 max-w-measure text-sm leading-relaxed text-muted" data-reveal>
           {lead}
         </p>
       )}

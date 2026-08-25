@@ -12,11 +12,11 @@ const Publications: React.FC = () => (
         data-reveal
         style={{ '--reveal-delay': `${Math.min(i, 4) * 60}ms` } as React.CSSProperties}
       >
-        <p className="text-[0.95rem] leading-snug text-fg">{pub.title}</p>
-        <p className="mt-2 text-[0.85rem] text-muted">
+        <p className="text-sm leading-snug text-fg">{pub.title}</p>
+        <p className="mt-2 text-xs text-muted">
           <Bold text={pub.authors} />
         </p>
-        <p className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-[0.8rem]">
+        <p className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
           <span className="text-faint">{pub.venue}</span>
           {pub.links.map((link) => (
             <a
@@ -24,7 +24,7 @@ const Publications: React.FC = () => (
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="footnote-link text-[0.8rem]"
+              className="footnote-link text-xs"
             >
               {link.label}
               <ExternalArrow size={9} />

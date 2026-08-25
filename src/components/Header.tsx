@@ -40,7 +40,7 @@ const Header: React.FC = () => {
                   <Link
                     to={item.to}
                     aria-current={pathname === item.to ? 'page' : undefined}
-                    className={`text-[0.8rem] transition-colors duration-300 hover:text-fg ${
+                    className={`text-sm transition-colors duration-300 hover:text-fg ${
                       pathname === item.to ? 'text-fg' : 'text-muted'
                     }`}
                   >

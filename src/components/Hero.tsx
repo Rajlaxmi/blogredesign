@@ -21,7 +21,7 @@ const Hero: React.FC = () => (
           noun
         </p>
 
-        <div className="flex flex-col gap-3 text-[0.95rem] leading-relaxed text-muted" data-reveal>
+        <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted" data-reveal>
           <p>
             <span className="mr-3 text-muted">1.</span>
             research scientist at{' '}

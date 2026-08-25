@@ -32,7 +32,8 @@ export default {
         ],
       },
       fontSize: {
-        display: ['clamp(2.25rem, 5.5vw, 2.75rem)', { lineHeight: '1.05', letterSpacing: '-0.01em' }],
+        // Fixed 2.75rem, matching daivikpatel.me's name/page-title treatment exactly.
+        display: ['2.75rem', { lineHeight: '1.05', letterSpacing: '-0.01em' }],
         label: ['0.7rem', { lineHeight: '1', letterSpacing: '0.14em' }],
       },
       maxWidth: {
