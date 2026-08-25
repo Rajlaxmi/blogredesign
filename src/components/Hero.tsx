@@ -103,11 +103,9 @@ const Hero: React.FC = () => (
       </div>
 
       <div>
-        <img
-          src={asset('arna.jpg')}
-          alt="Arna Ghosh"
-          className="aspect-[4/5] w-full max-w-[15rem] border border-rule object-cover"
-        />
+        {/* True transparent cutout — no border/box, blends into the page
+            background in both themes on its own. */}
+        <img src={asset('arna.png')} alt="Arna Ghosh" className="w-full max-w-[15rem]" />
       </div>
     </div>
   </section>
