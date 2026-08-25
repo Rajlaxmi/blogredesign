@@ -47,11 +47,11 @@ const Research: React.FC = () => (
         <div
           key={item.title}
           className={`border-t border-rule pt-8 first:border-t-0 first:pt-0 ${
-            item.image ? 'max-w-3xl' : 'max-w-measure'
+            item.image ? '' : 'max-w-measure'
           }`}
         >
           {item.image ? (
-            <div className="grid gap-6 sm:grid-cols-[1fr_16rem]">
+            <div className="grid gap-10 sm:grid-cols-[28rem_1fr] sm:items-stretch">
               {details}
               <img
                 src={item.image}
