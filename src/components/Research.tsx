@@ -51,12 +51,12 @@ const Research: React.FC = () => (
           }`}
         >
           {item.image ? (
-            <div className="grid gap-10 sm:grid-cols-[28rem_1fr] sm:items-stretch">
+            <div className="grid gap-10 sm:grid-cols-[38rem_1fr] sm:gap-20 sm:items-start">
               {details}
               <img
                 src={item.image}
                 alt={`Illustration for "${item.title}"`}
-                className="h-full w-full border border-rule object-cover"
+                className="w-4/5 object-cover"
               />
             </div>
           ) : (
