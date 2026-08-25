@@ -1,29 +1,17 @@
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Publications from './components/Publications';
-import Research from './components/Research';
-import Footer from './components/Footer';
-import useActiveSection from './hooks/useActiveSection';
-import useReveal from './hooks/useReveal';
-
-const SECTION_IDS = ['hero', 'about', 'publications', 'research', 'contact'];
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import PublicationsPage from './pages/PublicationsPage';
+import ResearchPage from './pages/ResearchPage';
+import NotFound from './pages/NotFound';
 
 function App() {
-  const activeSection = useActiveSection(SECTION_IDS);
-  useReveal();
-
   return (
-    <div className="min-h-screen bg-bg">
-      <Header activeSection={activeSection} />
-      <main>
-        <Hero />
-        <About />
-        <Publications />
-        <Research />
-      </main>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/publications" element={<PublicationsPage />} />
+      <Route path="/research" element={<ResearchPage />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 
