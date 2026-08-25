@@ -12,6 +12,8 @@ export interface ResearchDirection {
   links: ResearchLink[];
   /** Optional illustration, served from public/, shown beside the text. */
   image?: string;
+  /** Dark-mode variant of `image`; falls back to `image` when absent. */
+  darkImage?: string;
 }
 
 export const research: ResearchDirection[] = [
@@ -21,6 +23,7 @@ export const research: ResearchDirection[] = [
     description:
       'Investigating the geometric structure and spectral properties of neural network representations to understand how artificial and biological systems encode information — and using that to build task-agnostic metrics that predict model behavior and reveal how learning happens in large-scale vision and language models.',
     image: '/representation_geometry_light.png',
+    darkImage: '/representation_geometry_dark.png',
     links: [
       {
         label: 'Li*, Agrawal*, Ghosh*, et al. — NeurIPS 2025',

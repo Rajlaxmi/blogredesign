@@ -53,11 +53,20 @@ const Research: React.FC = () => (
           {item.image ? (
             <div className="grid gap-10 sm:grid-cols-[38rem_1fr] sm:gap-20 sm:items-start">
               {details}
-              <img
-                src={item.image}
-                alt={`Illustration for "${item.title}"`}
-                className="w-[92%] object-cover"
-              />
+              <div>
+                <img
+                  src={item.image}
+                  alt={`Illustration for "${item.title}"`}
+                  className={`w-[92%] object-cover ${item.darkImage ? 'dark:hidden' : ''}`}
+                />
+                {item.darkImage && (
+                  <img
+                    src={item.darkImage}
+                    alt={`Illustration for "${item.title}"`}
+                    className="hidden w-[92%] object-cover dark:block"
+                  />
+                )}
+              </div>
             </div>
           ) : (
             details
