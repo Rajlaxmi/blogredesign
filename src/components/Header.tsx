@@ -48,17 +48,6 @@ const Header: React.FC = () => {
                   </Link>
                 </li>
               ))}
-              <li>
-                <button
-                  type="button"
-                  onClick={() =>
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                  }
-                  className="text-[0.8rem] text-muted transition-colors duration-300 hover:text-fg"
-                >
-                  contact
-                </button>
-              </li>
             </ul>
           </nav>
 
